@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>100</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Recording
+--
+-releaseDate: LocalDate
+-purchasePrice: BigDecimal
+--
++streamingCost: BigDecimal
++streamRecording: void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>290</y>
+      <w>200</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Video
+--
+-recordingLength: Double
+-premiumCost: BigDecimal
+-perMinuteCost: BigDecimal
+--
++streamingCost(): BigDecimal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>200</y>
+      <w>130</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>290</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Audio
+--
+-streamCount: int
+-MAX_STREAMS: long
+--
++streamingCost(): BigDecimal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>200</y>
+      <w>160</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>440</y>
+      <w>300</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Media Catalog
+--
+-recordingList: ArrayList&lt;Recording&gt;
+-MAX_RECORDINGS: Integer (final)
+--
++addRecording(Recording recording): void
++removeRecording(Recording recording): void
++computeStreamingRevernue(): BigDecimal
++totalRecordings(): Long
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
